@@ -1,11 +1,11 @@
-install: install-deps
-	npx simple-git-hooks
+install: 
+	npx ci
 
 brain-games:
 	bin/brain-games.js
 
+lint:
+	npx eslint .  
 install-deps:
 	npm ci
 
-publish:
-	npm publish --dry-run
