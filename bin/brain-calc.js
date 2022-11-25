@@ -9,38 +9,29 @@ for (let i=0 ; i < 3 ; i++) {
     let a = getRandom();
     let b = getRandom();
     const oneration = randomOperation();
+    let rightAnswer = 0;
     if (oneration === '+') {
         console.log("Question:",a,'+',b);
-        const answer = readlineSync.question("Your answer: ");
-        const rightAnswer = a + b;
-        let answerNumber = Number(answer);
-        if (answerNumber === rightAnswer) console.log('Correct!');
-        else {
-            gameOver(name, answer, rightAnswer);
-        break;
-        }
+        rightAnswer = a + b;
     }
     else if (oneration === '-') {
-        console.log("Question:",a,'-',b);
-        const answer = readlineSync.question("Your answer: ");
-        const rightAnswer = a - b;
-        let answerNumber = Number(answer);
-        if (answerNumber === rightAnswer) console.log('Correct!');
+        if (a > b) {
+            rightAnswer = a - b;
+            console.log("Question:",a,'-',b);}
         else {
-            gameOver(name, answer, rightAnswer);
-        break;
-        }
+            rightAnswer = b - a;
+            console.log("Question:",b,'-',a);}
     }
     else {
         console.log("Question:",a,'*',b);
-        const answer = readlineSync.question("Your answer: ");
-        const rightAnswer = a * b;
-        let answerNumber = Number(answer);
-        if (answerNumber === rightAnswer) console.log('Correct!');
-        else {
-            gameOver(name, answer, rightAnswer);
+        rightAnswer = a * b;
+    }
+    const answer = readlineSync.question("Your answer: ");
+    let answerNumber = Number(answer);
+    if (answerNumber === rightAnswer) console.log('Correct!');
+    else {
+        gameOver(name, answer, rightAnswer);
         break;
-        }
     }
     if ( i===2 ) console.log("Congratulations,", name);
 }
