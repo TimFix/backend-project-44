@@ -15,13 +15,13 @@ const primeNumber = (number) => {
 const name = playerName(); 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 for (let i=0 ; i < 3 ; i++) {
-    const number = getRandom();
-    console.log("Question:",number);
-    const answer = readlineSync.question("Your answer: ");
-    const rightAnswer = primeNumber(number);
-    if (answer === rightAnswer) console.log('Correct!');
+    const simpleNumber = getRandom();
+    console.log("Question:",simpleNumber);
+    const YourAnswer = readlineSync.question("Your answer: ");
+    const Answer = primeNumber(simpleNumber);
+    if (YourAnswer === Answer) console.log('Correct!');
     else {
-        gameOver(name, answer, rightAnswer);
+        gameOver(name, YourAnswer, Answer);
         break;
     }
     if ( i===2 ) console.log("Congratulations,", name);
