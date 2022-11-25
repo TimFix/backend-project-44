@@ -5,7 +5,6 @@ import { gameOver, getRandom, parity } from '../src/index.js';
 
 const name = playerName(); 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-let j =0;
 for (let i=0 ; i < 3 ; i++) {
     const number = getRandom();
     console.log("Question:",number);
