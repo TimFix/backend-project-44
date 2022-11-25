@@ -1,5 +1,7 @@
-export const getRandom = (max = 99) => {
-    return Math.floor(Math.random() * max) + 1;
+export const getRandom = (min = 1,max = 100) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
 };
   
 export const parity = (number) => {

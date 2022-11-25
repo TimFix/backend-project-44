@@ -4,21 +4,20 @@ import { playerName } from '../src/cli.js';
 import { gameOver, getRandom } from '../src/index.js';
 
 const name = playerName(); 
-console.log('Find the greatest common divisor of given numbers.');
+console.log('What number is missing in the progression?');
 for (let i=0 ; i < 3 ; i++) {
-    let a = getRandom();
-    let b = getRandom();
-    let rightAnswer = 0;
-    let lowNumber = 0;
-    if (a > b) lowNumber = b;
-    else lowNumber = a;
-    for (let j = lowNumber; j > 0; j--){
-        if (((a % j) === 0) && ((b % j) === 0)) {
-            rightAnswer = j;
-            break
-        }
+    const array = [0];
+    array[0]= getRandom();
+    let step = getRandom(1,10);
+    let lengthArray = getRandom(5,20);
+    let unknownNumber = getRandom(1,lengthArray - 1);
+    for (let i = 1; i < lengthArray; i++){
+        array.push(array[i-1] + step);
     }
-    console.log("Question:", a, b);
+    let rightAnswer = array[unknownNumber];
+    array[unknownNumber] = '..';
+    let str = array.join(', ');
+    console.log("Question:", str);
     const answer = readlineSync.question("Your answer: ");
     let answerNumber = Number(answer);
     if (answerNumber === rightAnswer) console.log('Correct!');
