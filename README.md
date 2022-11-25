@@ -9,3 +9,5 @@ Brain even:https://asciinema.org/a/qeraF2C8006RVBMpJ6Y71GTDg
 Brain calc:https://asciinema.org/a/lGQLAaWRa6sJzrtME5ZP2GnBE
 
 Brain gcd:https://asciinema.org/a/IksZhMNiWos8u23Yg0B4wxEUS
+
+Brain progression:https://asciinema.org/a/lAueiYVJt5p5HInJlUvHhvv4s
