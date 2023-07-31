@@ -24,5 +24,5 @@ for (let i=0 ; i < 3 ; i++) {
         gameOver(name, YourAnswer, Answer);
         break;
     }
-    if ( i===2 ) console.log("Congratulations,", name);
+    if ( i===2 ) console.log("Congratulations,", name + '!');
 }
