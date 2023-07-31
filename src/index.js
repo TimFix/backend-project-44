@@ -10,8 +10,8 @@ export const parity = (number) => {
 };
  
 export const gameOver = (name, answer, rightAnswer) => {
-    console.log(answer,"is wrong answer ;(. Correct answer was",rightAnswer);
-    console.log("Let's try again",name);
+    console.log(answer,"is wrong answer ;(. Correct answer was " + rightAnswer + '.');
+    console.log("Let's try again" + name + '!');
 }
 
 export const randomOperation = () => {
