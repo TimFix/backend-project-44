@@ -4,6 +4,8 @@
 
 Приветствие в игре: Brain games:https://asciinema.org/a/1Hl6KcvxglE7DE8uLNJjtdwtE;
 
+[![asciicast](https://asciinema.org/a/3UFXjNsgXPQDURHOUvS2SNnk9.svg)](https://asciinema.org/a/3UFXjNsgXPQDURHOUvS2SNnk9)
+
 Игра "Проверка на четность" Brain even:https://asciinema.org/a/qeraF2C8006RVBMpJ6Y71GTDg
 
 Игра "Вычислитель" Brain calc:https://asciinema.org/a/lGQLAaWRa6sJzrtME5ZP2GnBE
