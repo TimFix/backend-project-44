@@ -17,7 +17,7 @@ export const gameProress = () => {
         }
         let rightAnswer = array[unknownNumber];
         array[unknownNumber] = '..';
-        let str = array.join(', ');
+        let str = array.join(' ');
         console.log("Question:", str);
         const answer = readlineSync.question("Your answer: ");
         let answerNumber = Number(answer);
