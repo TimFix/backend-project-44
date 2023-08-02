@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import { playerName } from '../cli.js';
 import { gameOver, getRandom, randomOperation } from '../index.js';
