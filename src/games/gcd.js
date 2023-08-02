@@ -19,7 +19,7 @@ export default () => {
         break;
       }
     }
-    console.log(`Question:, ${a} ${b}`);
+    console.log(`Question: ${a} ${b}`);
     const answer = readlineSync.question('Your answer: ');
     const answerNumber = Number(answer);
     if (answerNumber === rightAnswer) console.log('Correct!');
