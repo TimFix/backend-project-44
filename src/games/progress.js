@@ -1,31 +1,28 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import playerName from '../cli.js';
-import { gameOver, getRandom } from '../index.js';
+import { startGame, getRandom } from '../index.js';
+
+const rule = 'What number is missing in the progression?';
+const length = getRandom(5, 15);
+
+const startProgres = (start, step, length3) => {
+  const progres = [];
+  for (let i = start; progres.length < length3; i += step) {
+    progres.push(i);
+  }
+  return progres;
+};
+
+const rounds = () => {
+  const num1 = getRandom();
+  const lengthStep = getRandom(1, 10);
+  const progres = startProgres(num1, lengthStep, length);
+  const randomNumberProgres = getRandom(0, length - 1);
+  const rightAnswer = progres[randomNumberProgres].toString();
+  progres[randomNumberProgres] = '..';
+  const hideNumber = progres.join(' ');
+  return [hideNumber, rightAnswer];
+};
 
 export default () => {
-  const name = playerName();
-  console.log('What number is missing in the progression?');
-  for (let i = 0; i < 3; i += 1) {
-    const array = [0];
-    array[0] = getRandom();
-    const step = getRandom(1, 10);
-    const lengthArray = getRandom(5, 20);
-    const unknownNumber = getRandom(1, lengthArray - 1);
-    for (let j = 1; j < lengthArray; j += 1) {
-      array.push(array[j - 1] + step);
-    }
-    const rightAnswer = array[unknownNumber];
-    array[unknownNumber] = '..';
-    const str = array.join(' ');
-    console.log(`Question: ${str}`);
-    const answer = readlineSync.question('Your answer: ');
-    const answerNumber = Number(answer);
-    if (answerNumber === rightAnswer) console.log('Correct!');
-    else {
-      gameOver(name, answer, rightAnswer);
-      break;
-    }
-    if (i === 2) console.log(`Congratulations, ${name}!`);
-  }
+  startGame(rule, rounds);
 };
