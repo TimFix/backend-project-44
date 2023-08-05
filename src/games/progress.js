@@ -4,9 +4,9 @@ import getRandom from '../random.js';
 const rule = 'What number is missing in the progression?';
 const length = getRandom(5, 15);
 
-const startProgres = (start, step, length3) => {
+const startProgres = (start, step, lengthPoz) => {
   const progres = [];
-  for (let i = start; progres.length < length3; i += step) {
+  for (let i = start; progres.length < lengthPoz; i += step) {
     progres.push(i);
   }
   return progres;
