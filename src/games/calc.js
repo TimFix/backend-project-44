@@ -22,7 +22,7 @@ const math = (num1, num2, mathOperation) => {
   }
 };
 
-const rounds = () => {
+const generateRoundData = () => {
   const num1 = getRandom();
   const num2 = getRandom();
   const operation = randomOperation();
@@ -33,5 +33,5 @@ const rounds = () => {
 };
 
 export default () => {
-  startGame(rule, rounds);
+  startGame(rule, generateRoundData);
 };

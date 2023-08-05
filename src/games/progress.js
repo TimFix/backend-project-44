@@ -12,10 +12,10 @@ const startProgres = (start, step, length3) => {
   return progres;
 };
 
-const rounds = () => {
-  const num1 = getRandom();
+const generateRoundData = () => {
+  const num = getRandom();
   const lengthStep = getRandom(1, 10);
-  const progres = startProgres(num1, lengthStep, length);
+  const progres = startProgres(num, lengthStep, length);
   const randomNumberProgres = getRandom(0, length - 1);
   const rightAnswer = progres[randomNumberProgres].toString();
   progres[randomNumberProgres] = '..';
@@ -24,5 +24,5 @@ const rounds = () => {
 };
 
 export default () => {
-  startGame(rule, rounds);
+  startGame(rule, generateRoundData);
 };

@@ -13,12 +13,12 @@ const twoPoint = (num) => {
   return true;
 };
 
-const rounds = () => {
-  const num1 = getRandom();
-  const rightAnswer = twoPoint(num1) ? 'yes' : 'no';
-  return [num1, rightAnswer];
+const generateRoundData = () => {
+  const num = getRandom();
+  const rightAnswer = twoPoint(num) ? 'yes' : 'no';
+  return [num, rightAnswer];
 };
 
 export default () => {
-  startGame(rule, rounds);
+  startGame(rule, generateRoundData);
 };

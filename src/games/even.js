@@ -8,12 +8,12 @@ const parity = (number) => {
   return 'no';
 };
 
-const rounds = () => {
-  const num1 = getRandom();
-  const stNum1 = num1.toString();
-  return [stNum1, parity(num1)];
+const generateRoundData = () => {
+  const num = getRandom();
+  const stNum = num.toString();
+  return [stNum, parity(num)];
 };
 
 export default () => {
-  startGame(rule, rounds);
+  startGame(rule, generateRoundData);
 };
