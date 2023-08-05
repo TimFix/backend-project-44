@@ -1,7 +1,13 @@
-#!/usr/bin/env node
-import { startGame, getRandom, randomOperation } from '../index.js';
+import { startGame } from '../index.js';
+import getRandom from '../random.js';
 
 const rule = 'What is the result of the expression?';
+
+const randomOperation = () => {
+  const operation = ['+', '-', '*'];
+  const rand = Math.floor(Math.random() * operation.length);
+  return operation[rand];
+};
 
 const math = (num1, num2, mathOperation) => {
   switch (mathOperation) {
