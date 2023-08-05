@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { startGame, getRandom } from '../index.js';
 
- const parity = (number) => {
+const parity = (number) => {
   if (number % 2 === 0) return 'yes';
   return 'no';
 };
