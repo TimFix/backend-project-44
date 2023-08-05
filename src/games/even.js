@@ -1,5 +1,5 @@
-#!/usr/bin/env node
-import { startGame, getRandom } from '../index.js';
+import { startGame } from '../index.js';
+import getRandom from '../random.js';
 
 const parity = (number) => {
   if (number % 2 === 0) return 'yes';
