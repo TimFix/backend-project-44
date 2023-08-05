@@ -1,11 +1,6 @@
 import readlineSync from 'readline-sync';
 import playerName from './cli.js';
 
-export const parity = (number) => {
-  if (number % 2 === 0) return 'yes';
-  return 'no';
-};
-
 const rounds = 3;
 
 export const startGame = (rule, game) => {
