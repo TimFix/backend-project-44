@@ -1,4 +1,4 @@
-import { startGame } from '../index.js';
+import startGame from '../index.js';
 import getRandom from '../random.js';
 
 const rule = 'What is the result of the expression?';
