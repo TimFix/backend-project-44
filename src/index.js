@@ -19,11 +19,3 @@ export const startGame = (rule, game) => {
   }
   console.log(`Congratulations, ${name}!`);
 };
-
-export const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-export const randomOperation = () => {
-  const operation = ['+', '-', '*'];
-  const rand = Math.floor(Math.random() * operation.length);
-  return operation[rand];
-};
