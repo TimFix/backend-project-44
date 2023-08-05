@@ -10,7 +10,7 @@ export const startGame = (rule, game) => {
     const [question, answer] = game();
     console.log(`Question: ${question}`);
     const answerUs = readlineSync.question('Your answer: ');
-    if (!(answerUs === answer)) {
+    if (answerUs !== answer) {
       console.log(`${answerUs} is wrong answer ;(. Correct answer was ${answer}.`);
       console.log(`Let's try again, ${name}!`);
       return;
