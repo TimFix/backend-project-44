@@ -14,8 +14,7 @@ const math = (num1, num2, mathOperation) => {
     case '+':
       return num1 + num2;
     case '-':
-      if (num1 > num2) return num1 - num2;
-      return num2 - num1;
+      return num1 - num2;
     case '*':
       return num1 * num2;
     default:
@@ -28,8 +27,7 @@ const rounds = () => {
   const num2 = getRandom();
   const operation = randomOperation();
   let expression = '';
-  if (num1 > num2) expression = `${num1} ${operation} ${num2}`;
-  else expression = `${num2} ${operation} ${num1}`;
+  expression = `${num1} ${operation} ${num2}`;
   const rightAnswer = math(num1, num2, operation).toString();
   return [expression, rightAnswer];
 };
