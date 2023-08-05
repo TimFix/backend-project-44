@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-import { startGame, getRandom, parity } from '../index.js';
+import { startGame, getRandom } from '../index.js';
+
+ const parity = (number) => {
+  if (number % 2 === 0) return 'yes';
+  return 'no';
+};
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
